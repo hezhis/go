@@ -37,6 +37,7 @@ func (stream *Stream) Pool() StreamPool {
 // Reset reuse this stream instance by assign a new writer
 func (stream *Stream) Reset(out io.Writer) {
 	stream.out = out
+	stream.indention = 0
 	stream.buf = stream.buf[:0]
 }
 
